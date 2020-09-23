@@ -5,7 +5,7 @@ resource "local_file" "gcp_credential" {
 
 provider "google" {
   #credentials = file("${path.module}/gcp_credential.json")
-  credentials = local_file.gcp_credentials.filename
+  credentials = local_file.gcp_credential.filename
   project     = var.gcp_project
   region      = var.gcp_region
 }
