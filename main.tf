@@ -1,7 +1,3 @@
-variable "gcp_credential" {
-  default = "foo"
-}
-
 resource "local_file" "gcp_credential" {
     sensitive_content  = var.gcp_credential
     filename = "${path.module}/gcp_credential.json"
